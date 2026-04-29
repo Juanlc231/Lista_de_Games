@@ -1,0 +1,27 @@
+﻿@using Lista_de_Games.ViewModel
+@model UsersViewModel
+@{
+    var cont = 1;
+}
+<script src="~/js/HomeScript/Home.js"></script>
+
+<div class="main">
+    <div class="games-container">
+        @foreach (var game in Model.Games)
+        {
+            <div class="game-card" data-game="@game.Name" data-position="@game.Position" data-img="@Url.Content($"~/imgs/img{cont}.jpg")" data-note="@Model.User.Notes[cont - 1]" data-final-note="@game.FinalNote" data-indicador="@game.GameIndicator">
+                <img src="@Url.Content($"~/imgs/img{cont}.jpg")" alt="@game.Name" />
+                <span class="game-title">@game.Name</span>
+            </div>
+
+            cont = cont < 31 ? cont + 1 : 1;
+        }
+    </div>
+</div>
+
+<div class="modal fade" id="modalInfo" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content" id="modalContent">
+        </div>
+    </div>
+</div>

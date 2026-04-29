@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/modalStyle.css" asp-append-version="true" />
+
+<div id="gameModalContent">
+    <div class="modal-header">
+        <div class="d-flex align-items-center gap-3">
+            <div class="rounded-circle bg-primary bg-opacity-10 d-flex align-items-center justify-content-center"
+                 style="width:52px;height:52px;font-size:18px;font-weight:500;color:#0d6efd;">
+                @User.Identity.Name.Substring(0, 2).ToUpper()
+            </div>
+            <div>
+                <h6 class="mb-0">@User.Identity.Name</h6>
+                <small class="text-white">Membro ativo</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer border-0 pt-0">
+        <button type="button" class="btn btn-outline-info"
+                data-bs-dismiss="modal">
+                Fechar
+        </button>
+
+        <a asp-controller="Login" asp-action="Logout"
+               class="btn btn-outline-danger">
+            Sair da conta
+        </a>
+    </div>
+</div>

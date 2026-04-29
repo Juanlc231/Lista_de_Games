@@ -1,0 +1,152 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+}
+
+nav {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.game-card {
+    width: 410px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+    .game-card:hover {
+        transform: scale(1.05);
+    }
+
+    .game-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .game-card:hover .game-title {
+        transform: scale(1.2);
+    }
+
+.game-title {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.game-player {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.nav-link {
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-right: 2px;
+}
+
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+
+.game-show {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.firstItemPlayes {
+    border-left: solid 1px;
+    border-right: solid 1px;
+    text-align: center
+}
+
+.lastItemPlayes {
+    cursor: pointer;
+    border-right: solid 1px;
+    text-align: center
+}
+
+.itemPlayes {
+    border-right: solid 1px;
+    text-align: center
+}
+
+footer div {
+    color: white;
+}
+
+#modalContent {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+@media(min-width: 375px) and (max-width: 576px) {
+    .game-card {
+        width: 360px;
+    }
+
+    dl, ol, ul {
+        font-size: 13px;
+        margin: 4px;
+    }
+
+    .list-group-item:first-child {
+        height: 40px;
+    }
+}

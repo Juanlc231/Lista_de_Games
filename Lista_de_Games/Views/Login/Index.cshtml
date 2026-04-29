@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+    @model string;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>@ViewData["Title"] Lista de Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/LoginScript/Index.js"></script>
+</head>
+<body>
+    <div class="login-card">
+        <h1>Lista</h1>
+        <h6>de Jogos</h6>
+
+        <form method="post" asp-controller="Login">
+            <div id="divName">
+                <span>USUÁRIO</span>
+                <input required type="text" name="userName" placeholder="Usuário" />
+            </div>
+            
+            <button type="submit" id="btnEntrar" asp-action="Login" class="btn-login btn btn-outline-info">Entrar</button>
+        </form>
+
+        <div id="mensagem" class="d-flex mt-3 justify-content-center align-items-center">
+            @if (Model != null)
+            {
+                <p>@Model</p>
+            }
+        </div>
+    </div>   
+</body>
+</html>

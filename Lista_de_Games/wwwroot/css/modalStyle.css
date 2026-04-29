@@ -1,0 +1,23 @@
+#gameModalContent {
+    background: linear-gradient(135deg, #000000 0%, #1e3a5f 50%, #010a02 100%);
+}
+
+#gameModalContent h5, h6, small {
+    color: white;
+}
+
+#formNota span{
+    color: white;
+}
+
+.h6 {
+    color: white;
+}
+
+@media(min-width: 375px) and (max-width: 576px) {
+
+    .modal-dialog {
+        margin: 10px;
+    }
+}
+

@@ -1,0 +1,33 @@
+﻿@model List<Users>;
+
+<div class="main">
+    <ul class="list-group">
+        @foreach (var playes in Model)
+        {
+            <li class="list-group-item d-flex justify-content-between align-items-ceniter list-group-item-secondary">
+                <span class="fs-5 fw-bold">@playes.Name</span>
+            </li>
+            <div style="margin-bottom: 20px;">
+                <table style="border-bottom: solid 1px" class="table">
+                    <tbody>
+                        <tr>
+                            <td class="firstItemPlayes" scope="col">JOGOS JOGADOS: @playes.TotalGamesPlayed</td>
+                            <td class="itemPlayes" scope="col">NOTA MEDIA RECEBIDA: @playes.NoteReceived</td>
+                            <td class="itemPlayes" scope="col">NOTA MEDIA ATRIBUIDA: @playes.NoteAssigned</td>
+                            <td class="lastItemPlayes dropdown dropdown-toggle" data-bs-toggle="dropdown">
+                                Jogos
+
+                                <ul class="dropdown-menu">
+                                    @foreach (var game in playes.Games)
+                                    {
+                                        <li><span class="dropdown-item">@game</span></li>
+                                    }
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        }
+    </ul>
+</div>

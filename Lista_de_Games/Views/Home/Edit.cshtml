@@ -1,0 +1,34 @@
+﻿<script src="~/js/HomeScript/Edit.js"></script>
+<link rel="stylesheet" href="~/css/modalStyle.css" asp-append-version="true" />
+
+<div id="gameModalContent">
+    <div class="modal-header">
+        <h5 class="modal-title">Adicionar Nota</h5>
+        <button type="button" id="closeModal" class="btn-close"></button>
+    </div>
+
+    <div class="modal-body">
+        <form id="formNota">
+            <div class="game-show" style="width:100%;">
+                <span id="gameName" name="gameName" class="h5"></span>
+                <img id="gameImg" style="width:100%; margin-bottom: 20px" />
+                <span id="gameFinalNote" name="gameFinalNote" class="h6"></span>
+                <span id="gameIndicador" name="gameIndicador" class="h6"></span>
+                <input type="hidden" id="positionGame" name="positionGame" />
+            </div>
+
+            <div style="text-align: center">
+                <label class="h6">Nota:</label>
+                <input type="text" id="note" name="note" class="form-control col-11 mb-2" placeholder="0 a 10" maxlength="4" />
+                <div id="messagem"></div>
+            </div>
+        </form> 
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-outline-danger" id="close">Fechar</button>
+        <div id="botao">
+            <button class="btn btn-outline-success" id="btnSalvar">Salvar</button>
+        </div>
+    </div>
+</div>
